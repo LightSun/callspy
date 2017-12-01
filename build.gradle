@@ -40,6 +40,4 @@ jar {
     }
 }
 
-task wrapper(type: Wrapper) {
-    gradleVersion = '2.1'
-}
+// steps: gradle jar  ->  in cmd java -DXbootclasspath/p:javassist.jar:callspy-0.1.jar -javaagent:callspy-0.1.jar heaven7.test.AgentTest.

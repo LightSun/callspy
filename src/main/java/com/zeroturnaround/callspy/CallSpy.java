@@ -18,6 +18,8 @@ public class CallSpy implements ClassFileTransformer {
                           ProtectionDomain protectionDomain,
                           //endregion
                           byte[] classfileBuffer) throws IllegalClassFormatException {
+    //
+    System.out.println("Started CallSpy >>>as  ClassFileTransformer.transform , className = " + className);
 
     ClassPool cp = ClassPool.getDefault();
     cp.importPackage("com.zeroturnaround.callspy");
@@ -32,7 +34,7 @@ public class CallSpy implements ClassFileTransformer {
     //region filter out non-application classes
     // Application filter. Can be externalized into a property file.
     // For instance, profilers use blacklist/whitelist to configure this kind of filters
-    if (!className.startsWith("com/zt")) {
+    if (!className.startsWith("heaven7/test")) {
       return classfileBuffer;
     }
     //endregion

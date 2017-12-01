@@ -8,3 +8,4 @@ public class Main {
     System.out.println("\nEnjoy! :-)");
   }
 }
+//java -DXbootclasspath/p:javassist.jar:callspy-0.1.jar -javaagent:callspy-0.1.jar com.zeroturnaround.callspy.Main
